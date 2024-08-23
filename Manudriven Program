@@ -1,0 +1,44 @@
+#Manudriven to do following opreation 1.To check whether the entered string is a palindrome or not, 2. 2. To find the length of the entered string, and To replicate the entered string 5 times.
+while True :
+    print("Welcome")
+    print("To check whether the entered string is a palindrome or not Press 1 \nTo find the length of the entered string. Press 2 \nTo replicate the entered string 5 times Press 3")
+    print("Press 4 To Exit")
+    cho = int(input("Enter Your Choice : "))
+
+    if cho == 1:
+        str = input("Enter The String : ").lower()
+        length = len(str)
+        if length % 2 != 0:
+            length -= 1
+        Loop = int(length/2)
+        l = -1
+        s = 0
+        for i in range (0,Loop):
+            if str[i] == str[l]:
+                s += 1
+                l += -1
+        if s == Loop:
+            print("The entered string is a palindrome")
+        else:
+            print("The entered string is not a palindrome")
+    
+
+    elif cho == 2:
+        str = input("Enter The String : ")
+        s = 0
+        for i in str :
+            s+= 1
+        print("Length Of The Entered String is : ",s)
+    
+
+    elif cho == 3:
+        str = input("Enter The String : ")
+        print(str*5)
+    
+    
+    elif cho == 4:
+        print("Bye Bye")
+        break
+
+    else:
+        print("Wrong Choice")
